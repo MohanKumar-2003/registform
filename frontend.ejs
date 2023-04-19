@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+           <meta charset="UTF-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Database</title>
+    </head>
+    <body>
+           <% if(employeedetails.length>0){ %>
+           <% for(var i=0;i<employeedetails.length;i++){ %>
+                    <h3>FirstName- <%- employeedetails[i].fname%></h3>
+                    <h3>LastName- <%-employeedetails[i].lname%></h3>
+                    <h3>Email- <%-employeedetails[i].mail_id%></h3>
+                    <h3>Phone Number- <%- employeedetails[i].ph_num%></h3>
+                    <h3>Age- <%- employeedetails[i].gender%></h3>
+                    <h3>Gender- <%- employeedetails[i].age%></h3>
+                    <h3>Joining Date- <%- employeedetails[i].join_date%></h3>
+                    <h3>Current Date- <%- employeedetails[i].curr_date%></h3>
+                    <h3>Years of Experience- <%- employeedetails[i].years%></h3>
+                    <hr>
+           <% }%>
+           <%}else{%>
+            <h3>Employee Details not found</h3>
+           <%} %>
+            
+    </body>
+    </html>

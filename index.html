@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+</head>
+<body>
+    <div class="form1">
+        <h1>Employee Registration Form</h1>
+        <form action="/" method="post">
+            <label>First Name: *</label>
+            <input type="text" name="fname" required>
+            <br/>
+            <br>
+            <label>Last Name: *</label>
+            <input type="text" name="lname" required>
+            <br/>
+             <br>
+            <label>Phone number: *</label>
+            <input type="number" name="phone" required>
+            <br />
+             <br>
+            <label>Email: *</label>
+            <input type="email" name="mail" required>
+            <br />
+             <br>
+             <label>Gender: *</label>
+             <input type="radio" name="gender" value="male">Male
+             <input type="radio" name="gender" value="male">Female
+             <br />
+             <br>
+             <label>Age: *</label>
+             <input type="text" name="age">
+             <br />
+             <br>
+            <label>Qualifications: *</label>
+            <input type="text" name="quali" required>
+            <br />
+             <br>
+            <label>Joining Date: *</label>
+            <input type="date" name="join" required>
+             <br />
+             <br>
+            <label>Current Date: *</label>
+            <input type="date" name="cur_date" id="curr" required>
+             <br />
+             <br>
+            <label>Years of Experience: *</label>
+            <input type="text" name="years"  id="year">
+             <br />
+             <br>
+            <input type="submit" name="submit">
+        </form>
+    </div>
+</body>
+</html>
+<style>
+    .form1{
+        text-align: center;
+    }
+
+</style>
+<!-- <script>
+   var date1=document.getElementById("join").value
+   var date2=document.getElementById("curr").value
+   var date3=document.getElementById('year').innerHTML=date2.getFullYear()-date1.getFullYear()
+   console.log(date3)
+</script> -->
+<script>
+const currentDate = document.getElementById("curr").value
+const joiningDateStr = document.getElementById('join').value;
+const date1 = new Date(joiningDateStr).getFullYear();
+const date2 = new Date(currentDate).getFullYear();
+
+
+const difference= date2-date1;
+document.getElementById('year').innerHTML=difference;
+
+</script>
